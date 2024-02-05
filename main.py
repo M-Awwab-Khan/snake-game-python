@@ -30,4 +30,8 @@ while True:
         scoreboard.increase_score()
         scoreboard.update_scoreboard()
     
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        scoreboard.gameover()
+        break
 
+screen.exitonclick()
