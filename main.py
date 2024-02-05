@@ -36,11 +36,10 @@ while game_is_on:
         scoreboard.gameover()
         game_is_on = False
 
-    for segment in snake.segments:
-        if segment != snake.head:
-            if snake.head.distance(segment) < 5:
-                scoreboard.gameover()
-                game_is_on = False
+    for segment in snake.segments[1:]:
+        if snake.head.distance(segment) < 5:
+            scoreboard.gameover()
+            game_is_on = False
             
 
 screen.exitonclick()
