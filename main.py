@@ -22,7 +22,7 @@ for position in starting_positions:
 while True:
     screen.update()
     time.sleep(0.1)
-    for segment in segments:
-        segment.forward(20)
+    for i in range(len(segments)-1, 0, -1):
+        segments[i].goto(segments[i-1].xcor(), segments[i-1].ycor())
+    segments[0].forward(10)
 
-screen.exitonclick()
