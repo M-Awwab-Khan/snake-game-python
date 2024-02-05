@@ -24,6 +24,6 @@ while True:
     snake.move()
     
     if snake.head.distance(food) < 15:
-        print('collided')
+        food.refresh()
     
 
